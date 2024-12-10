@@ -1,5 +1,5 @@
 const convertToCelsius = function (origTemp) {
-  const newTemp = ((origTemp - 32) * 5) / 9;
+  const newTemp = (origTemp - 32) * (5 / 9);
   return Math.round(newTemp * 10) / 10;
 };
 
