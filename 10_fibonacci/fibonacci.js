@@ -1,13 +1,17 @@
 const fibonacci = function (num) {
-  let thisStep = 0;
-  let lastStep = 1;
+  let current = 1;
+  let last = 0;
 
-  for (let i = 1; i <= num; i++) {
-    let temp = lastStep;
-    lastStep = thisStep;
-    thisStep += temp;
+  if (num < 0) return "OOPS";
+  if (num == 0) return 0;
+  if (num == 1) return 1;
+
+  for (let i = 2; i <= num; i++) {
+    let temp = current;
+    current += last;
+    last = temp;
   }
-  return thisStep;
+  return current;
 };
 
 // Do not edit below this line
